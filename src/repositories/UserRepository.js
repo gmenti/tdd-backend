@@ -6,11 +6,11 @@ class UserRepository {
   }
   
   get table() {
-    return this.database(this.tableName);
+    return this.database.table(this.tableName);
   }
   
   all() {
-    return this.table.get();
+    return this.table.select('*').get();
   }
 
 }
